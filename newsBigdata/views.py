@@ -7,13 +7,14 @@ from .models import User, News, Interest, Scrap
 # 맨 처음 화면
 ## 클라우드(가운데), 회원가입|로그인(우측상단)->Mypage|로그아웃(우측상단), 클라우드 대표뉴스목록(우측), 스크랩 목록(하단)
 def index(request):
-    return HttpResponse("Hello, world.")
+    return render(request, 'index.html')
 
-def index2(request):
-    datas = User.objects.all()
-    datas2 = News.objects.get(pk=1)
-    datas3 = Scrap.objects.filter(news_id=1)
-    return
+
+# def index2(request):
+#     datas = User.objects.all()
+#     datas2 = News.objects.get(pk=1)
+#     datas3 = Scrap.objects.filter(news_id=1)
+#     return
 # 회원가입 페이지
 ## email입력, pw입력, pw다시확인 입력 -> DB 등록
 ### 가능하면 이메일인증 가능토록
