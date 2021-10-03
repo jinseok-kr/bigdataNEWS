@@ -37,18 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_extensions',
     'newsBigdata.apps.NewsBigdataConfig',
     'accounts.apps.AccountsConfig',
 ]
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-
-GRAPH_MODELS = {
-    'all_applications': True,
-    'group_models': True,
-}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
